@@ -1,0 +1,31 @@
+<!-- tmpl_include name="commentformheader.tmpl" -->
+
+
+<h3>Add a comment</h3>
+
+<p style="margin-bottom: 40px;">
+Place the link to your response here. Your post must include the link for the thread that you are replying to, which is <a href="<!-- tmpl_var name="home_page" -->/thread/<!-- tmpl_var name="threadid" -->"><!-- tmpl_var name="home_page" -->/thread/<!-- tmpl_var name="threadid" --></a>
+</p>
+
+<form action="/webmention" method="post">
+<input size=31 type=text name="source"> 
+<input type="hidden" name="target" value="<!-- tmpl_var name="target_url" -->"> 
+<input class="submitbutton" type=submit name=sb value="Submit">
+</form>
+
+<br />
+<hr />
+
+<p style="margin: 40px 0 40px 0;">
+To learn more about Webmention, visit the IndieWeb website at <a href="https://indieweb.org/webmention">https://indieweb.org/webmention</a>
+</p>
+
+<p>
+FYI
+<br />
+ - <strong>source URI :</strong> is the link to your post
+<br />
+ - <strong>target URI :</strong> is <a href="<!-- tmpl_var name="home_page" -->/thread/<!-- tmpl_var name="threadid" -->"><!-- tmpl_var name="home_page" -->/thread/<!-- tmpl_var name="threadid" --></a>
+</p>
+
+<!-- tmpl_include name="footer.tmpl" -->

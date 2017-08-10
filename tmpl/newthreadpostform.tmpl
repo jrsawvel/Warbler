@@ -1,0 +1,34 @@
+<!-- tmpl_include name="header.tmpl" -->
+
+
+<h3>Start a new thread</h3>
+
+<p style="margin-bottom: 40px;">
+Place the link to your post here. Your thread starter post must include the link to this site's homepage, which is <a href="<!-- tmpl_var name="home_page" -->"><!-- tmpl_var name="home_page" --></a>
+</p>
+
+<form action="/webmention" method="post">
+<input size=31 type=text name="source"> 
+<input type="hidden" name="target" value="<!-- tmpl_var name="thread_post_target_uri" -->">
+<input class="submitbutton" type=submit name=sb value="Submit">
+</form>
+
+
+<br />
+
+<hr />
+
+<p style="margin: 40px 0 40px 0;">
+To learn more about Webmention, visit the IndieWeb website at <a href="https://indieweb.org/webmention">https://indieweb.org/webmention</a>
+</p>
+
+<p>
+FYI
+<br />
+ - <strong>source URI :</strong> is the link to your post
+<br />
+ - <strong>target URI :</strong> is <a href="<!-- tmpl_var name="thread_post_target_uri" -->"><!-- tmpl_var name="thread_post_target_uri" --></a>
+</p>
+
+
+<!-- tmpl_include name="footer.tmpl" -->

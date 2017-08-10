@@ -1,0 +1,18 @@
+<!-- tmpl_include name="header.tmpl" -->
+
+<!-- tmpl_loop name="stream_loop" -->
+<p class="h-entry">
+<!-- tmpl_var name="html" -->
+</p>
+<!-- /tmpl_loop -->
+
+<p>
+<!-- tmpl_if not_last_page -->
+<span class="olderlink"><a href="<!-- tmpl_var name="next_page_url" -->">Older &gt;&gt;</a></span>
+<!-- /tmpl_if -->
+<!-- tmpl_if not_page_one -->
+<span class="newerlink"><a href="<!-- tmpl_var name="previous_page_url" -->">&lt;&lt; Newer</a></span>
+<!-- /tmpl_if -->
+</p>
+
+<!-- tmpl_include name="footer.tmpl" -->

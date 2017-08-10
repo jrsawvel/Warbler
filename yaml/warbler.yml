@@ -1,0 +1,17 @@
+    template_home:                  /home/warbler/Warbler/tmpl
+    site_name:                      Warbler
+    app_name:                       Warbler v1.0
+    home_page:                      http://warbler.soupmode.com
+    thread_post_target_uri:         http://warbler.soupmode.com/homepage
+    site_description:               Webmention-based Message Board
+    domain_name:                    warbler.soupmode.com
+    webmention_endpoint:            http://warbler.soupmode.com/webmention
+    max_entries_on_page:            15 
+    database_name:                  warblerdvlp1
+    database_server:                http://127.0.0.1
+    database_port:                  5984
+    debug_mode:                     0
+    memcached_port:                 11211
+    write_html_to_memcached:        1
+    website_throttle_interval:      60
+    author_throttle_interval:       300

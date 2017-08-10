@@ -1,0 +1,151 @@
+html {
+    font-size: 100%; /* ~16px browser default */
+    height: 100%;
+    max-height: 100%;
+}
+
+body {
+    font-size: 22px;
+    font-size: 1.375em;
+    color:     #222;
+    background-color: #fff;
+    background-color: #fffff6;
+    margin: 0 auto;
+    max-width: 720px;
+    max-width: 45rem;
+    padding:0 10px; 
+    padding:0 .625em; 
+    line-height: 34px;
+    line-height: 1.54545em; /* 34 divided by 22 */
+    font-family: 
+      -apple-system, 
+      BlinkMacSystemFont, 
+      "San Francisco", 
+      "Roboto",
+      "Oxygen",
+      "Segoe UI", 
+      "Ubuntu", 
+      "Cantarell",
+      "Fira Sans", 
+      "Droid Sans", 
+      "Helvetica Neue", 
+      "Lucida Grande",
+      Verdana, 
+      "Helvetica", 
+      sans-serif;
+}
+
+p {
+/*
+    margin: 50.6px 0 50.6px 0;
+    margin: 2.3em 0 2.3em 0;
+*/
+    margin: 0 0 66px 0;
+    margin: 0 0 3em 0;
+}
+
+a {
+    color: #0000ff;
+}
+
+a:visited {
+    color: #cc3399;
+} 
+
+.olderlink {
+    float: right;
+}
+
+.greenlink a,
+.greenlink a:visited {
+    color: green;
+    text-decoration: underline;
+}
+
+.olderlink a,
+.newerlink a,
+.olderlink a:visited,
+.newerlink a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+.greenlink a:hover,
+.olderlink a:hover,
+.newerlink a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.header {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    margin: .625em 0 1.25em 0;
+    font-size: 19.8px;
+    font-size: 22px;
+    font-size: .9em;
+    font-size: 1em;
+/*    border-bottom: 1px solid #666; */
+}
+
+.home-link {
+ /*   float: right; */
+}
+
+.sitewide-footer {
+    clear: both;
+    text-align: center;
+    font-size: 19.8px;
+font-size: 22px;
+    font-size: .9em;
+font-size: 1em;
+}
+
+.header a,
+.sitewide-footer a,
+.header a:visited,
+.sitewide-footer a:visited {
+    color: #666;
+color: green;
+    text-decoration: none;
+}
+
+.header a:hover,
+.sitewide-footer a:hover {
+    color: #000;
+color: green;
+    text-decoration: underline;
+}
+
+.header-left {
+    float: left; 
+    text-align: left; 
+    width: 33%;
+}
+
+.header-center {
+    text-align: center;
+    font-size: 80%;
+    width: 33%;
+    display: inline-block; 
+    line-height: 100%;
+}
+
+.header-right {
+    float: right; 
+    text-align: right; 
+    width: 33%;
+}
+
+
+/* 720px divided by 16px */
+@media only screen and (max-width: 45rem) {
+}
+
+
+@media print {
+    body {
+        max-width:none;
+    }
+}
+
