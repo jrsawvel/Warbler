@@ -1,5 +1,15 @@
 # Warbler README.md
 
+The test website is found at <http://warbler.soupmode.com>.
+
+For the above test website, I disabled the check that searches the target content for the source URL. I wanted to test the code that parses HTML pages, database storage and retrieval, and web display.
+
+The [Warbler Testing](http://sawv.org/2017/07/24/warbler-testing.html) page contains a list of URLs that I tested, and the page shows how the content should be displayed after parsing.
+
+This page titled [Warbler - Webmention-based Message Board](http://sawv.org/2017/07/11/warbler-webmentionbased-message-board.html) contains ideas and development notes from the two or three weeks of off-and-on programming that I did in July-August 2017 to get Warbler running. 
+
+Most of that time was spent creating and testing the code to parse HTML pages that would produce worthwhile display within Warbler. I should have known that parsing HTML pages would be tricky and a bit frustrating, since authors can format their pages in nearly anyway they want. Authors are not required to use semantic HTML tag markup.
+
 Warbler is a message board where all thread starter posts and comments are Webmentions.
 
 A Webmention is a cross-site communication idea, espoused by the IndieWeb community. It may remind some of the trackback and pingback functionality that many blog sites offered back in the aught years.
@@ -12,11 +22,13 @@ The authors' CMS apps would send Webmentions to Brid.gy to syndicate their posts
 
 It looks like the authors are using social media directly, but they aren't. It looks like others posted comments directly on the authors' websites, but they didn't.
 
+[Example](https://nicolas-hoizey.com/2017/07/so-long-disqus-hello-webmentions.html#webmentions) web post where the "comments" "posted" at this personal website rely on the Webmention.
+
 Another Webmention example involves users creating RSVP-type posts on their websites, and then their publishing apps send the RSPV Webmentions to the websites that announced the events, provided that the sites accepts Webmentions.
 
 Some websites accept Webmentions by displaying HTML text input fields, and authors can manually copy the URLs to their posts and paste them into the text input fields.
 
-A Webmention post is considered the source URL. This post must contain the URL of the post that the author is responding to, which is called the target URL.
+A Webmention post is considered the **source URL**. This post must contain the URL of the post that the author is responding to, which is called the **target URL**.
 
 A protocol describes how Webmentions are sent and received, but website owners who receive Webmentions can display them however they desire.
 
@@ -46,8 +58,6 @@ The Webmention spec can be found at <https://www.w3.org/TR/webmention>, which  s
 Asynchronously processing a received Webmention is a suggestion. Warbler does not do this either.
 
 Warbler implements throttling for the entire website and for each author's domain name.
-
-The test website is found at <http://warbler.soupmode.com>.
 
 A post from any domain name is accepted at most once every 60 seconds.
 
