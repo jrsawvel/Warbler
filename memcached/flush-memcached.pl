@@ -3,9 +3,8 @@
 use strict;
 
 use lib '/home/warbler/Warbler/lib';
-use lib '/home/warbler/Warbler/lib/CPAN';
 
-use Config::Config;
+use App::Config;
 use Cache::Memcached::libmemcached;
 
 my $port        = Config::get_value_for("memcached_port");

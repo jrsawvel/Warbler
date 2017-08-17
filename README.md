@@ -1,16 +1,20 @@
 # Warbler README.md
 
+Warbler is a message board where all thread starter posts and comments are Webmentions.
+
 The test website is found at <http://warbler.soupmode.com>.
+
+Here's a [shorter description](http://sawv.org/2017/08/17/warbler-description.html) about Warbler and Webmention.
 
 For the above test website, I disabled the check that searches the target content for the source URL. I wanted to test the code that parses HTML pages, database storage and retrieval, and web display.
 
 The [Warbler Testing](http://sawv.org/2017/07/24/warbler-testing.html) page contains a list of URLs that I tested, and the page shows how the content should be displayed after parsing.
 
+In June 2017, I [jotted down](http://sawv.org/2017/06/25/webmentionbased-message-board-idea.html) my initial thoughts for a Webmention-based message board.
+
 This page titled [Warbler - Webmention-based Message Board](http://sawv.org/2017/07/11/warbler-webmentionbased-message-board.html) contains ideas and development notes from the two or three weeks of off-and-on programming that I did in July-August 2017 to get Warbler running. 
 
 Most of that time was spent creating and testing the code to parse HTML pages that would produce worthwhile display within Warbler. I should have known that parsing HTML pages would be tricky and a bit frustrating, since authors can format their pages in nearly anyway they want. Authors are not required to use semantic HTML tag markup.
-
-Warbler is a message board where all thread starter posts and comments are Webmentions.
 
 A Webmention is a cross-site communication idea, espoused by the IndieWeb community. It may remind some of the trackback and pingback functionality that many blog sites offered back in the aught years.
 
@@ -130,3 +134,18 @@ Webmentions provide a way to post comments from one website to another. But I wo
 Users would create content on their own websites or web presences. Preferably the former with their own domain names. Only a portion of the posts would be displayed in the Warbler app. Readers would have to click the links to the authors' websites to read the entire posts, unless it was a short post.
 
 This might lead to the discovery of other personal publishers, and it might encourage more readers to launch their own websites.
+
+The initial version of Warbler was built with:
+
+* Ubuntu Linux
+* Nginx
+* FastCGI
+* Perl
+* HTML::Template
+* CouchDB
+* Memcached
+
+The app is small. Parsing the HTML for the Webmentions was the tricky part. But I would like to create additional versions of Warbler in one or more other programming languages.
+
+If I implement a search function, I'll use Elasticsearch. Search, however, would be restricted to searching the excerpts stored by Warbler in the CouchDB database.
+

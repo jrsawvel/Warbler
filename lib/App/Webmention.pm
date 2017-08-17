@@ -85,6 +85,12 @@ sub post_webmention {
         do_error($web_form, $hash_ref->{error}, $hash_ref->{error_description});
     }
 
+    if ( $hash_ref->{author_domain_name} and (  lc(Config::get_value_for("domain_name")) eq lc($hash_ref->{author_domain_name})  )  ) {
+        do_error($web_form, "Invalid Webmention.", "Cannot use content from this host website.");
+
+    }
+
+ 
     if ( author_domain_name_throttle($hash_ref->{author_domain_name}) ) {
         do_error($web_form, "Throttle limit reached for $hash_ref->{author_domain_name}.", "Try your submission again in a few minutes.");
     }
