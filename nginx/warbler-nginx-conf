@@ -1,62 +1,56 @@
 ########
-# WREN
-# stored in /etc/nginx/sites-available
-# ln s /etc/nginx/sitesavailable/config-file /etc/nginx/sites-enabled/config-file
+# warbler
 ########
 
 server {
 	listen   80; 
 
-	server_name wren.soupmode.com;
+	server_name warbler.soupmode.com;
 
-        autoindex on;
+        location ~ ^/(css/|javascript/|images/) {
+          root /home/warbler/Warbler/root;
+          access_log off;
+          expires max;
+        }
+
+        set $use_cache 1;
+        set $post_id 0;
+
+        if ($request_method = "POST" ) {
+            set $use_cache 0;
+        }
+
+        if ($request_uri ~ "^/thread/([0-9a-zA-Z]+)") {
+            set $post_id $1;
+            set $use_cache "${use_cache}1";
+        }
+
+
+        if ($request_uri ~ "^/$") {
+            set $post_id "homepage";
+            set $use_cache "${use_cache}1";
+        }
 
         location / {
-            root /home/wren/Wren/root;
-            index index.html;
-            try_files $uri $uri/ $uri.html =404;
-            # expires max;
-            # expires modified +30d;
-            add_header Cache-Control no-cache;
-            expires 1s;
+             default_type text/html;
+             if ( $use_cache = 11 ) {
+                 set $memcached_key "warbler.soupmode.com-$post_id";
+                 memcached_pass 127.0.0.1:11211;
+             }
+             error_page 404 = @fallback;
         }
 
-#        location /feed.json {
-#            default_type application/json;
-#        }
-
-        location ~ ^/(css/|javascript/|images) {
-            root /home/wren/Wren/root;
-            access_log off;
-            # expires max;
-            expires 30d;
-        }
-
-        location /api/v1 {
-	     root /home/wren/Wren/perl;
-             index wrenapi.pl;
-             rewrite  ^/(.*)$ /wrenapi.pl?query=$1 break;
+        location @fallback {
+	     root /home/warbler/Warbler/perl;
+             index warbler.pl;
+             rewrite  ^/(.*)$ /warbler.pl?query=$1 break;
              fastcgi_pass  127.0.0.1:8999;
-             fastcgi_index wrenapi.pl;
+             fastcgi_index warbler.pl;
              fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
              include fastcgi_params;
-        }
-
-        location /wren/ {
-	     root /home/wren/Wren/perl;
-             index wren.pl;
-             rewrite  ^/(.*)$ /wren.pl?query=$1 break;
-             fastcgi_pass  127.0.0.1:8999;
-             fastcgi_index wren.pl;
-             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-             include fastcgi_params;
-        }
-
-        error_page 404 /error-404.html;
-        location = /error-404.html {
-            root /home/wren/Wren/root;
-            internal;
         }
 }
+
+
 
 
