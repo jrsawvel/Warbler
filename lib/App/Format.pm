@@ -42,7 +42,7 @@ sub create_html_output {
 
 
     if ( $display_type eq "stream" ) {
-        $html_output .= "<small> - <span class=\"greenlink\"><a href=\"/thread/$hash_ref->{_id}/$hash_ref->{slug}\">Comments: $hash_ref->{comment_count}</a></span></small>";
+        $html_output .= "<small> - <span class=\"greenlink\"><a class=\"u-url\" href=\"/thread/$hash_ref->{_id}/$hash_ref->{slug}\">Comments: $hash_ref->{comment_count}</a></span></small>";
         if ( $hash_ref->{comment_count} > 0 ) {
             if ( exists($hash_ref->{last_post_id}) ) {
                 $html_output .= "<br /><small> - <span class=\"greenlink\"><a href=\"/thread/" . $hash_ref->{_id} . "#" . $hash_ref->{last_post_id} . "\">last comment</a></span>: " . Utils::format_date_time($hash_ref->{last_post_date}) . "</small>";
