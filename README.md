@@ -2,9 +2,23 @@
 
 Warbler is a message board where all thread starter posts and comments are Webmentions.
 
-The test website is found at <http://warbler.soupmode.com>.
+The test website is found at <http://warbler.soupmode.com> and the production website exists at <http://kleete.com>.
 
-Here's a [shorter description](http://sawv.org/2017/08/17/warbler-description.html) about Warbler and Webmention.
+Here's a [shorter description](http://sawv.org/2017/08/17/warbler-description.html) about Warbler and Webmentions.
+
+The initial version of Warbler was built using:
+
+* Ubuntu Linux
+* Nginx
+* FastCGI
+* Perl
+* HTML::Template
+* CouchDB
+* Memcached
+
+The app is small. Parsing the HTML for the Webmentions was the tricky part. But I would like to create additional versions of Warbler in one or more other programming languages, such as Python and Lua.
+
+If I implement a search function, I'll use Elasticsearch. Search, however, would be restricted to searching the excerpts stored by Warbler in the CouchDB database.
 
 For the above test website, I disabled the check that searches the target content for the source URL. I wanted to test the code that parses HTML pages, database storage and retrieval, and web display.
 
@@ -135,19 +149,6 @@ Users would create content on their own websites or web presences. Preferably th
 
 This might lead to the discovery of other personal publishers, and it might encourage more readers to launch their own websites.
 
-The initial version of Warbler was built with:
-
-* Ubuntu Linux
-* Nginx
-* FastCGI
-* Perl
-* HTML::Template
-* CouchDB
-* Memcached
-
-The app is small. Parsing the HTML for the Webmentions was the tricky part. But I would like to create additional versions of Warbler in one or more other programming languages.
-
-If I implement a search function, I'll use Elasticsearch. Search, however, would be restricted to searching the excerpts stored by Warbler in the CouchDB database.
 
 
 ### August 2017 commenting thoughts
@@ -250,4 +251,108 @@ I bought the toledotalk.com domain name in September 2001. In late 2002, I start
 
 No rule states that website owners must make it easy for users to post their comments.
 
+
+
+### September 2017 commenting thoughts
+
+* Sep 6, 2017 - Mozilla blog post - [Mozilla and the Washington Post Are Reinventing Online Comments](https://blog.mozilla.org/blog/2017/09/06/mozilla-washington-post-reinventing-online-comments)
+* related Hacker News [thread](https://news.ycombinator.com/item?id=15232147)
+* Aug 11, 2017 - poynter.org - [The Coral Project talked to more than 150 global newsrooms about building better communities. Here's what it found](https://www.poynter.org/news/coral-project-talked-more-150-global-newsrooms-about-building-better-communities-heres-what-it)
+* coralproject.org - [Talk](https://coralproject.net/products/talk.html)
+
+From the Talk homepage, a predictable claim:
+
+> Online comments are broken.
+
+Everything is broken. The internet, the web, blogging, email, app development, etc. 
+
+I'm leery of a group's claim that something is broken when, naturally, that same org promotes their product to fix the problem.
+
+In my opinion, online comments are not broken. I see online comments all the time, and they seem to be formatted well. What is broken? 
+
+The concept of permitting user contributed content has existed for a long time, even in the print newspaper world with letters to the editor. But newspapers don't print every letter to the editor as-is. Newspapers discard many letters. Newspapers lightly edit the letters.
+
+And newspapers require letter writers to include real names and addresses. Those are the barriers that newspapers created to manage user-contributed content. If a letter writer wishes to remain anonymous, then it's probable that the newspaper will reject the letter. The writer will have to find a newspaper with lower barriers.
+
+Online comments are not broken. It's a simple function that works easily. The problem is with how publishers manage the comments. A better description would be mismanage. 
+
+Without barriers, the discussions will most likely fall into ruin. Adding a massive blob of technology might impress a manager, but it could create too much complexity for the users. 
+
+I guess that would be a barrier: complex tech. If users cannot figure out how a system works, then they might give up and go away. And how much moderation will a potentially complex system require? Will small to mid-sized daily newspapers and weekly newspapers have the staff to manage a system like Talk?
+
+My solution is a simple, private message board for paying subscribers  only. It could be the [bbPress](https://bbpress.org) message board, built by the WordPress company.
+
+A private, Webmention-based message board, such as Warbler/kleete, would by default create an additional significant barrier to entry.
+
+More from the Talk website:
+
+> Our Talk tool rethinks how moderation, comment display, and conversation function, creating the opportunity for safer, smarter discussions around your work.
+
+> To design Talk, we’ve done an enormous amount of research into the design and function of online comment spaces, and how they can better connect with journalism.
+
+> We’ve created a streamlined system that can improve how people behave and interact in the comments space, and allow moderators to more easily identify and remove disruptive comments.
+
+> Talk is lightweight, secure, flexible, and responsive. It’s also fully extensible with a RESTful and Graph API and a plugin architecture that includes webhooks.
+
+From the Mozilla blog post:
+
+> To engage readers, build community, and strengthen journalism, Mozilla’s open-source commenting platform will be integrated across washingtonpost.com
+
+> Digital journalism has revolutionized how we engage with the news, from the lightning speed at which it’s delivered to different formats on offer.
+
+> But the comments section beneath that journalism? It’s… broken. Trolls, harassment, enmity and abuse undermine meaningful discussion and push many people away. 
+
+Man, the BS marketing spin. If a website has trolls, and if a website permits harassment, then it's 100 percent the fault of the website owners. 
+
+Comments are not broken when another website that permits comments does not have trolls and does not permit harassment.
+
+> Many major newsrooms are removing their comments. Many new sites are launching without them. Instead, newsrooms are directing interaction and engagement to social media. 
+
+In other words, the website owners have outsourced their trolls and their acceptance of online harassment to their social media accounts. Brilliant.
+
+> At Mozilla, we’re not giving up on online comments. We believe that engaging readers and building community around the news strengthens not just journalism, but also open society. We believe comments are a fundamental part of the decentralized web.
+
+But if a comment creator or a comment reader does not buy a subscription to the media org, then why should that person be permitted to create and even read the comments? It seems that a better community would form if comment creators knew that their comments would be private and only available to paying customers. Immediately, they share one thing in common: they like the media org enough to fund it.
+
+Paying customers may be less likely to harass in the media org's private message board because if they get booted, they would have to buy another subscription under a different name and address in order to get back into the forum.
+
+And if the message board is private, then that might discourage trolls, since their trolling ways would be seen by a limited audience.
+
+Why should comments at the end of newspaper stories be public?
+
+> Mozilla has been researching, testing, and building software in this area since 2015. Today, our work is taking a huge step forward as the Washington Post integrates Talk — Mozilla’s open-source commenting platform — across washingtonpost.com.
+
+> Talk is currently deployed across the Washington Post’s Politics, Business, and The Switch (technology) sections, and will roll out to more sections in the coming weeks.
+
+Is this too complex for a mid-sized, local, newspaper org, like the Toledo Blade?
+
+> Here’s what makes Talk different
+
+> It’s filled with features that improve interactions, including functions that show the best comments first, ignore specific users, find great commenters, give badges to staff members, filter out unreliable flaggers, and offer a range of audience reactions.
+
+This part is good.
+
+> You own your data. Unlike the most popular systems, every organization using Talk runs its own version of the software, and keeps its own data. Talk doesn’t contain any tracking, or digital surveillance. This is great for journalistic integrity, good for privacy, and important for the internet.
+
+This sounds like it will not work without JavaScript.
+
+> It’s fast. Talk is small — about 300kb — and lightweight. Only a small number of comments initially load, to keep the page load low. New comments and reactions update instantaneously.
+
+This is interesting, but the tech is probably beyond the Toledo Blade.
+
+> It’s flexible. Talk uses a plugin architecture, so each newsroom can make their comments act in a different way. Plugins can be written by third parties — the Washington Post has already written and open sourced several — and applied within the embed code, in order to change the functionality for particularly difficult topics.
+
+Hopefully.
+
+> It’s easy to moderate. Based on feedback from moderators at 12 different companies, we’ve created a simple moderation system with keyboard shortcuts and a feature-rich configuration.
+
+The HN thread contains over 300 comments with a lengthy sub-thread about embedding Reddit comments.
+
+Here's a different [suggestion](https://news.ycombinator.com/item?id=15233008) by an HN user:
+
+> In an ideal comment system I believe that articles, comments and moderation events should come from three different, decentralized streams (like Atom) that the end user can subscribe to individually and that are joined at the end users client. That would would provide transparency to the moderation process, ability to comment anywhere, and it would allow moderators to become effective spam-filters without giving them the power of censorship. Now, imagine if this system was built into the browser and it became the default commenting platform for all websites.
+
+Interesting but highly technical with a lot of questions, but the user was spitballing, which is good.
+
+In that HN thread, nobody mentioned the IndieWeb nor Webmentions.
 
