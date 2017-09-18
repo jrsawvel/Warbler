@@ -1,4 +1,4 @@
-# Warbler README.md
+# Warbler README
 
 Warbler is a message board where all thread starter posts and comments are Webmentions.
 
@@ -148,4 +148,106 @@ The initial version of Warbler was built with:
 The app is small. Parsing the HTML for the Webmentions was the tricky part. But I would like to create additional versions of Warbler in one or more other programming languages.
 
 If I implement a search function, I'll use Elasticsearch. Search, however, would be restricted to searching the excerpts stored by Warbler in the CouchDB database.
+
+
+### August 2017 commenting thoughts
+
+Aug 31, 2017 - cjr.org - [From civil to cesspool: Local news battles offensive comments](https://www.cjr.org/united_states_project/comments-trolling-post-and-courier.php)
+
+> LAST WEEK, AS THE CHARLESTON POST & COURIER covered a hostage standoff and shooting at a local restaurant, editor Mitch Pugh announced his paper would shut down comments on the developing story.
+
+> Pugh has advised his Twitter followers for years to avoid the comments sections on stories and social media sites. 
+
+Strange. A newspaper editor used social media to tell other social media people not to read and post to social media.
+
+Pugh's August 2015 [tweet](https://mobile.twitter.com/SCMitchP/status/633789381736820736)
+
+> Don't read the Facebook comments. Don't read the Facebook comments. Don't read the Facebook comments. Don't read the Facebook comments.
+
+As if Twitter comments or discussions are better. It's hard to comprehend this. Use Twitter, which can easily be the cesspool of the web, to tell people not to read Facebook comments. 
+
+But Facebook and Twitter can be useful too, as can be message boards, comment sections on blog posts, and comment sections for newspaper articles. I don't think that a singular viewpoint can be applied widely for all services.
+
+Back to the cjr.org article.
+
+> But responses to coverage of the shooting in Charleston—a scene that gripped a city familiar with gun violence and the national news—compelled Pugh to shut down comments on a story at the P&C for the first time he can recall.
+
+> The Post & Courier followed its breaking news coverage with [a story about the comments](http://www.postandcourier.com/news/a-deadly-shooting-at-a-charleston-restaurant-unleashes-a-torrent/article_5cd0c928-890a-11e7-b58f-e3b011d039d2.html) its work attracted—“a torrent of racist, conspiratorial, politically-charged and outright bizarre comments.” For that story, Pugh said most of the comments “were coming from outside of our market.” The P&C also noted an uptick in comments after its coverage caught a link from The Drudge Report.
+
+> The incident in Charleston reignited a debate about whether local news outlets should keep online comments—and just how to keep such comments civil. Countless newsrooms rely on comments sections and social media to foster community engagement and **drive traffic to their sites,** but those platforms are too frequently hosts to hate, bigotry, threats and damaging content. Many of those newsrooms lack the resources required to clean up comments or scrub offensive material from such platforms. “A lot of editors in the country are struggling with how to handle this,” Pugh says.
+
+If web traffic is a goal for commenting systems, then that media site is already on a road to failure, regarding user-contributed content. It's only a matter of time before the newspaper removes comments from its articles.
+
+cjr.org story:
+
+> However, some local newsrooms are experimenting with new technology to try and disinfect the cesspools that can swirl in the spaces below online stories.
+
+Excerpts from the Aug 24, 2017 Post & Courier [article](http://www.postandcourier.com/news/a-deadly-shooting-at-a-charleston-restaurant-unleashes-a-torrent/article_5cd0c928-890a-11e7-b58f-e3b011d039d2.html) about comments:
+
+> "Don't read the comments" is the tried and truest rule of the internet as online discourse inevitably devolves into toxic cesspools of human expression. Jessie Daniels, a sociology professor at City University of New York's Hunter College, and an expert on internet racism, blames this phenomenon on the uniquely "depersonalized and intimate" *nature of the online comments section.*
+
+Nope. Wrong. Anil Dash explained the answer in his 2011 blog post titled [If You Website's Full OF Assholes, It's YOUR Fault](http://anildash.com/2011/07/if-your-websites-full-of-assholes-its-your-fault.html)
+
+100 percent of the blame belongs to the Post & Courier, including its editor Mitch Pugh and the author of the above P&C article. Trolls, drive-by flamers, and general a-holes are acting as expected. It's who they are. They are predictable. 
+
+It's up to the publishers to erect barriers to irritate and discourage the flamers. If most of the comments for the one P&C story were from the outside, how easy was it for visitors to post comments on the P&C website? 
+
+A simple barrier is to require would-be commenter to provide a valid email address when creating an account. An activation link gets sent to the user who cannot post a comment until the user clicks the link in the email to activate the account.
+
+But wait, there's more. Add another barrier where this new commenter cannot post a comment until the user's account is at least 24-hours-old. What's wrong with that? Nothing. In fact, increase the time frame to 48 hours or 72 hours. 
+
+Forcing a new user to wait one to three days or more won't harm anything because if the goal is truly to create a community, then a community member won't mind waiting a couple days to post a comment. If flamers don't want to wait, then they will probably never post, which means the barriers worked, prevening toxic comments from getting posted.
+
+Barriers, barriers, barriers.
+
+Publishers do not need complex technology to manage comments systems. They need to be creative with inventing their barriers. 
+
+It appears that the P&C permitted Facebook comments. Why? How long ago did the P&C give up trying to implement their own comment system and buy into the myth that Facebook comments led to more civil discussions?
+
+In my opinion, a media org implementing Facebook comments at the bottom of news articles is another eventual failure, regarding user-contributed content. Is using Facebook comments meant to create a community or to create traffic?
+
+If P&C permitted Facebook comments, it seems to me that their system did not restrict commenting only to paying customers. If anyone with a Facebook account could comment on P&C stories, then that's P&C's fault. That's P&C's failure.
+
+When viewing a P&C article, I cannot determine how to post comments. Maybe they disabled comments for all articles now.
+
+More from their article about comments:
+
+> But on Facebook, the devastating news unleashed a torrent of racist, conspiratorial, politically-charged and outright bizarre comments.
+
+I don't understand "on Facebook". Does this mean Facebook comments that get embedded at the bottom of P&C articles, or does the writer mean at facebook.com?
+
+More from the P&C story about comments:
+
+> There's another reason, too, why you may be noticing more overtly racist comments online. Daniels blames the rise of the so-called "alt-right" — the re-branded face of white supremacy — that has successfully infiltrated mainstream politics and media with help from social media and white supremacist websites like Stormfront.
+
+When publishers, journalists, and researchers fail to see the problem in plain sight, then we'll see more idiotic reasons like above. Several years ago, the Toledo Blade switched from its own commenting system to Facebook comments. 
+
+I started my message board toledotalk.com in 2003, but it took me until 2010 until I finally found a set of barriers that discouraged the spammers, trolls, and drive-by flamers. The drive-by flamers like to create an account and post one comment or comment only in one current thread, and that's it. Site owners should discourage all of this behavior. One-thread posters and one-day wonders do not build a community.
+
+Again, Dash's [article](http://anildash.com/2011/07/if-your-websites-full-of-assholes-its-your-fault.html is from 2011, but it applied to 2001 too. None of the commenting problems that exist on newspaper websites in 2017 have anything to do with politics in 2017. The problem has existed for 20 years, and it's enabled by site owners.
+
+Either disable comments altogether or innovate barriers to encourage quality over quantity. Media orgs like to complain, which solves nothing, especially when they are to blame, but they don't recognize this fact. 
+
+If media orgs want to try complex technology sanitize comment sections, that's fine, but I don't think that this topic needs over-thinking.
+
+Years ago, MetaFilter implemented a barrier where new users had to pay a one-time, lifetime fee of either $1 or $5. Why don't media orgs do that if they are going to open their comment sections to everyone? 
+
+In my opinion, newspaper orgs should restrict their comment sections to subscribers, and the comments should be private. In other words, the comment sections are hidden from public view. Only logged-in subscribers can read and post comments. Barriers.
+
+No barriers or barriers that are super easy to circumvent are signs to me that the media org only wants comment sections to generate web traffic, and the org is not serious about nurturing a community with thoughtful discussions on the topics covered by the newspaper.
+
+When publishers make it easy for trolls and flamers to destroy a comments section, then I blame the publishers and not the trolls. 
+
+Excerpts from Dash's 2011 post that editors like Pugh need to read:
+
+> If you run a website, you need to follow these steps. if you don't, you're making the web, and the world, a worse place. And it's your fault. Put another way, take some goddamn responsibility for what you unleash on the world.
+
+> How many times have you seen a website say "We're not responsible for the content of our comments."? I know that when you webmasters put that up on your sites, you're trying to address your legal obligation. Well, let me tell you about your moral obligation: Hell yes, you are responsible. You absolutely are. When people are saying ruinously cruel things about each other, and you're the person who made it possible, it's 100% your fault. If you aren't willing to be a grown-up about that, then that's okay, but you're not ready to have a web business. Businesses that run cruise ships have to buy life preservers. Companies that sell alcohol have to keep it away from kids. And people who make communities on the web have to moderate them.
+
+Dash makes multiple suggestions, but he failed to discuss barriers to entry. 
+
+I bought the toledotalk.com domain name in September 2001. In late 2002, I started building my code for toledotalk.com. For about a year, I read and studied other community websites. I read the book [Design for Community: The Art of Connecting Real People in Virtual Places](https://www.amazon.com/Design-Community-Derek-Powazek/dp/0735710759/kvetch) by [Derek Powazek](http://powazek.com/about) who wrote about barriers to entry.
+
+No rule states that website owners must make it easy for users to post their comments.
+
 
