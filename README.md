@@ -264,9 +264,9 @@ From the Talk homepage, a predictable claim:
 
 > Online comments are broken.
 
-Everything is broken. The internet, the web, blogging, email, app development, etc. 
+Everything is broken. [The internet](http://sawv.org/2017/05/23/the-internet-is-not-broken.html), the web, [media](http://sawv.org/2016/11/30/yet-another-startup-that-will-fix-the-broken-media.html), blogging, email, app development, etc. 
 
-I'm leery of a group's claim that something is broken when, naturally, that same org promotes their product to fix the problem.
+I'm leery of a group's claim that something is broken when, naturally, that same org promotes their products to fix the problem.
 
 In my opinion, online comments are not broken. I see online comments all the time, and they seem to be formatted well. What is broken? 
 
